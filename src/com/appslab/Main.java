@@ -3,12 +3,23 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args) {
+String a = "abc";
+String b = "bc";
+String c = "samurai";
+String d = "zi";
+if (a.endsWith(b)){
+    System.out.println("true");
+}
+else {
+    System.out.println("false");
+}
+if (c.endsWith(d)){
+    System.out.println("true");
+}
+else{
+    System.out.println("False");
+}
 
-
-        double length=0.2;
-        double height=0.4;
-        double towerHeight=100;
-        double distance=(towerHeight/height)+(towerHeight/height)*length;
-        System.out.println(distance);
     }
+
 }
