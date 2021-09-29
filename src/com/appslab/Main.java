@@ -6,23 +6,38 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner cc = new Scanner(System.in);
+        String player1 = "Matko";
+        String player2 = "Misko";
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println("Select first number:");
-        int a = cc.nextInt();
+        System.out.println("Player 1: Choose rock, paper, or scissors:");
+        player1 = scan.next().toLowerCase();
+        System.out.println("Player 2: Choose rock, paper, or scissors:");
+        player2 = scan.next().toLowerCase();
 
-        System.out.println("Select second number:");
-        int b = cc.nextInt();
+        if (player1.equals(player2)) {
+            System.out.println("it's a tie!");
+        } else if (player1.equals("rock")) {
 
-        System.out.println("Select third number:");
-        int c = cc.nextInt();
+            if (player2.equals("scissors")) {
+                System.out.println("Player 1 wins");
+            } else if (player2.equals("paper")) {
+                System.out.println("Player 2 wins");
+            }
+        } else if (player1.equals("paper")) {
 
-        System.out.println("Select fourth number:");
-        int d = cc.nextInt();
+            if (player2.equals("rock")) {
+                System.out.println("player 1 wins");
+            } else if (player2.equals("scissors")) {
+                System.out.println("player 2 wins");
+            }
+        } else if (player1.equals("scissors")) {
 
-        int array1[] = {a, b, c, d};
-        for (int i = 0; i < array1.length; i++) {
-            System.out.println(array1[i] * array1.length);
+            if (player2.equals("paper")) {
+                System.out.println("player 1 wins");
+            } else if (player2.equals("rock")) {
+                System.out.println("player 2 wins");
+            }
         }
 
     }
