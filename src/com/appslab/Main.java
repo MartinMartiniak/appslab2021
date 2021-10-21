@@ -3,23 +3,26 @@ package com.appslab;
 public class Main {
 
     public static void main(String[] args) {
-String a = "abc";
-String b = "bc";
-String c = "samurai";
-String d = "zi";
-if (a.endsWith(b)){
-    System.out.println("true");
-}
-else {
-    System.out.println("false");
-}
-if (c.endsWith(d)){
-    System.out.println("true");
-}
-else{
-    System.out.println("False");
+
+        Student student1 = new Student("John", 12345);
+        System.out.println(student1.getName() + ": " + student1.getStudentNumber());
+    }
 }
 
+class Student{
+    private String Name;
+    private int StudentNumber;
+
+    public Student(String name, int studentNumber){
+        Name = name;
+        StudentNumber = studentNumber;
     }
 
+    public String getName() {
+        return Name;
+    }
+
+    public int getStudentNumber() {
+        return StudentNumber;
+    }
 }
